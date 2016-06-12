@@ -1,4 +1,5 @@
 from scrapy.spider import BaseSpider
+from scrapy.selector import HtmlXPathSelector
 
 
 class DmozSpider(BaseSpider):
@@ -10,5 +11,12 @@ class DmozSpider(BaseSpider):
 	]
 
 	def parse(self, response):
-		filename = response.url.split("/")[-2]
-		open(filename, 'wb').write(response.body)
+		hxs = HtmlXPathSelector(response)
+		sites = hxs.xpath('//ul/li')
+		for site in sites:
+			title = site.xpath('a/text()').extract()
+			link = site.xpath('a/@href').extract()
+			desc = site.xpath('text()').extract()
+			print title, link, desc
+#		filename = response.url.split("/")[-2]
+#		open(filename, 'wb').write(response.body)
