@@ -7,9 +7,10 @@
 
 from scrapy.item import Item, Field
 
-class DmozItem(Item):
+
+class Website(Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    title = Field()
-    link = Field()
+    name = Field()
+    url = Field()
     desc = Field()

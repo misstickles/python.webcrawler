@@ -32,3 +32,5 @@ scrapy startproject webcrawler
 cd webcrawler
 
 scrapy crawl name
+
+scrapy crawl club -o out.csv -t csv
