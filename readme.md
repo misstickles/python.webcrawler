@@ -9,9 +9,10 @@ pip install virtualenv
 # use 2.7
 E:\...>virtualenv venv
 
-# Install lxml wheel from 
-# http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
-# venv\Scripts\pip install ""C:\Users\me\Downloads\lxml-3.4.4-cp35-none-win32.whl"
+Optionally install:
+VSPython    https://www.microsoft.com/en-us/download/details.aspx?id=44266
+lxml wheel  http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
+            venv\Scripts\pip install ""C:\Users\me\Downloads\lxml-3.4.4-cp35-none-win32.whl"
 
 install pywin32 to c:\python27
 http://www.lfd.uci.edu/~gohlke/pythonlibs/#pywin32-220		# wheel
